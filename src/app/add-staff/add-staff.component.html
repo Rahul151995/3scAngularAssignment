@@ -1,0 +1,51 @@
+<div class="staff-alter col-6">
+    <div>
+        <h4>Add Staff</h4>
+    </div>
+
+
+    <form [formGroup]="form" (ngSubmit)="formSubmit(form)">
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="form-outline">
+                    <input formControlName="name" type="text" id="form3Example1" class="form-control" 
+                    [ngClass]="{ 'is-invalid': isFormSubmit && f.name.errors }"/>
+                    <div *ngIf="isFormSubmit && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Name is required</div>
+                    </div>
+                    <label class="form-label" for="form3Example1">Name</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <input formControlName="designation" type="text" id="form3Example2" class="form-control" 
+                    [ngClass]="{ 'is-invalid': isFormSubmit && f.designation.errors }"/>
+                    <div *ngIf="isFormSubmit && f.designation.errors" class="invalid-feedback">
+                        <div *ngIf="f.designation.errors.required">Designation is required</div>
+                    </div>
+                    <label class="form-label" for="form3Example2">Designation</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input formControlName="mobile" type="text" id="form3Example3" class="form-control" 
+            [ngClass]="{ 'is-invalid': isFormSubmit && f.mobile.errors }"/>
+            <div *ngIf="isFormSubmit && f.mobile.errors" class="invalid-feedback">
+                <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+            </div>
+            <label class="form-label" for="form3Example3">Mobile</label>
+        </div>
+
+
+
+
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Add Staff</button>
+
+
+    </form>
+</div>

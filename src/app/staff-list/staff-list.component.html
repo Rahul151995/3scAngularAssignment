@@ -1,0 +1,27 @@
+<div class="m-4">
+    <h4>Staff List</h4>
+</div>
+
+
+<div class="m-4">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of staffList; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{d.name}}</td>
+                <td>{{d.mobile}}</td>
+                <td>@{{d.designation}}</td>
+            </tr>
+            <tr *ngIf="staffList.length == 0"><td colspan="4" class="text-center">No Record Found</td></tr>
+
+        </tbody>
+    </table>
+</div>

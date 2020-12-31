@@ -1,0 +1,48 @@
+<div class="col-6 register-alter">
+    <form [formGroup]="form" (ngSubmit)="formSubmit(form)">
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+            <div class="col">
+                <div class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" formControlName="name" />
+                    <label class="form-label" for="form3Example1">Name</label>
+                      <div *ngIf="isFormSubmit && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Name is required</div>
+              </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" formControlName="email" />
+                    <label class="form-label" for="form3Example2">Email</label>
+                      <div *ngIf="isFormSubmit && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+              </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="form3Example3" class="form-control" formControlName="mobile" />
+            <label class="form-label" for="form3Example3">Mobile</label>
+              <div *ngIf="isFormSubmit && f.mobile.errors" class="invalid-feedback">
+                <div *ngIf="f.mobile.errors.required">Mobile is required</div>
+              </div>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <input type="password" id="form3Example4" class="form-control" formControlName="password" />
+            <label class="form-label" for="form3Example4">Password</label>
+              <div *ngIf="isFormSubmit && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+              </div>
+        </div>     
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+
+     
+    </form>
+</div>

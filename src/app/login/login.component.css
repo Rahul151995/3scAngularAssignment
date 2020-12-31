@@ -1,0 +1,18 @@
+.login-alter{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+  
+}
+.form-outline input {
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.invalid-feedback {
+    margin-left: 12px;
+}
+.invalid-feedback, .valid-feedback{
+    margin-top: -1.10rem !important;
+}

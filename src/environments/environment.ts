@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api_url:"https://ssschain.herokuapp.com/api/sssc/"
+  // api_url:"localhost:5000/api/3sc/"
+  // api_url:"http://09609b27cec4.ngrok.io/api/sssc/"
 };
 
 /*

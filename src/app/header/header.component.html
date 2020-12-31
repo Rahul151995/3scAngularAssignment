@@ -1,0 +1,9 @@
+<div class="header">
+    <a href="#default" class="logo">3S Supply Chain Solutions</a>
+    <div class="header-right">
+        <a *ngIf="isTokenExist" [routerLink]="'/staff-list'">Staff List</a>
+        <a *ngIf="isTokenExist" [routerLink]="'/add-staff'">Add Staff</a>
+        <a *ngIf="!isTokenExist" [routerLink]="'/login'">Login</a>
+        <a *ngIf="isTokenExist"  (click)="logout()">Logout</a>
+    </div>
+</div>

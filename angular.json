@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "ssscAngularAssignment"
+  "defaultProject": "ssscAngularAssignment",
+  "cli": {
+    "analytics": "17d3cdef-e104-4db1-9199-2f07f0dc89db"
+  }
 }
